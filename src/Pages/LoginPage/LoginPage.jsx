@@ -6,7 +6,7 @@ export function LoginPage() {
 
 
     return (
-
+      
       <div className={Styles.body}>
       
       <div className={Styles.titleBox}>
@@ -26,7 +26,7 @@ export function LoginPage() {
 
         <div className={Styles.content}>
           <h1 className={Styles.whiteText}>Contraseña</h1>
-          <input type="text" className={Styles.textField} placeholder="email" />
+          <input type="text" className={Styles.textField} placeholder="password" />
         </div>
 
         <div className={Styles.content}>
