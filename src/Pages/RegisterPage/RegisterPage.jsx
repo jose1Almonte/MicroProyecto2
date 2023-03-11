@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-import { CompRegGoogle_URL, HOME_URL } from '../../constants/urls';
+import { HOME_URL } from '../../constants/urls';
 import { registerWithEmailAndPassword, signInWithGoogle } from '../../firebase/auth-service';
 import Styles from './RegisterPage.module.css'
 
