@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100&display=swap');
+
+*{
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+
+
+body{
+    background: #40728D;
+}
+
+
+.titulo2{
+    width: 100%;
+    height: 139px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 76px;
+    color: #FFFFFF;
+}
+
+.subtitulo1{
+    width: 56.25%;
+    height: 108px;
+
+    display: flex;
+
+    justify-content: space-around;
+    align-items: center;
+
+
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 47px;
+    
+    color: #FFFFFF;
+}
+
+.search-field1{
+    
+    position: absolute;
+    width: 331px;
+    height: 36px;
+    left: 500px;
+    top: 225px;
+
+    background: #BBD8DE;
+}
+
+
+.subtitulo2{
+    
+    width: 56.25%;
+    height: 108px;
+
+    display: flex;
+
+    justify-content: space-around;
+    align-items: center;
+
+
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 47px;
+    
+    color: #FFFFFF;
+}
+
+
+.search-field2{
+    
+    position: absolute;
+    width: 331px;
+    height: 36px;
+    left: 500px;
+    top: 330px;
+    
+
+    background: #BBD8DE;
+
+}
+
+.button1L{
+    cursor: pointer;
+    background: #E5F6FA;
+    height: 79px;
+    width: 484px;
+    margin-top: 50px;
+    margin-left: 450px;
+
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 47px;
+
+    color: #000000;
+
+}
+
+.button2L{
+    cursor: pointer;
+    background: #E5F6FA;
+    position: absolute;
+    width: 484px;
+    height: 79px;
+    left: 450px;
+    top: 600px;
+
+
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 47px;
+
+    color: #000000;
+
+
+}
+
