@@ -5,11 +5,12 @@ import { HomePage } from './Pages/HomePage/HomePage'
 import { ProfilePage } from './Pages/ProfilePage/ProfilePage'
 import { AboutMePage } from './Pages/AboutMePage/AboutMePage'
 import { SkillsPage } from './Pages/SkillsPage/SkillsPage'
-import { AboutMe_URL, HOME_URL, LOGIN_URL, PROFILE_URL, REGISTER_URL, SKILLS_URL } from './constants/urls'
+import { AboutMe_URL, HOME_URL, LOGIN_URL, PROFILE_URL, REGISTER_URL, SKILLS_URL, MOVIE_URL } from './constants/urls'
 import './index.css'
 import { Layout } from './components/Layout/Layout'
 import { RegisterPage } from './Pages/RegisterPage/RegisterPage'
 import { LoginPage } from './Pages/LoginPage/LoginPage'
+import { MovieDetailPage } from './Pages/MovieDetailPage/MovieDetailPage'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -25,6 +26,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Route path={SKILLS_URL} element = {<SkillsPage/>}/> 
       <Route path={REGISTER_URL} element = {<RegisterPage/>}/> 
       <Route path={LOGIN_URL} element = {<LoginPage/>}/> 
+      <Route path={MOVIE_URL} element={<MovieDetailPage />} /> 
 
     </Route>
 

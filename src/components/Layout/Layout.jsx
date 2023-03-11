@@ -9,7 +9,6 @@ export function Layout() {
         <section className='body'>
             <Outlet/>
         </section>
-        <h1>Footer</h1>
     </main>
   )
 }

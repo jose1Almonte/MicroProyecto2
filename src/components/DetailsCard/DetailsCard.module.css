@@ -1,0 +1,52 @@
+
+.base {
+    width: 80vw;
+    display:flex;
+    flex-direction: column;
+    background-color: #1b597c;
+    color:white;
+    flex-direction: column;
+    justify-content:flex-start;
+}
+.title {
+    text-align: center;
+    justify-content: center;
+    font-size: 22px;
+    margin: 10px 0; 
+
+}
+
+.info {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin:50px 0;
+
+}
+
+.poster {
+    width: 40%;
+    background-color: red;
+}
+
+.poster img {
+    object-fit: cover;
+}
+.text {
+    width: 50%;
+    height:100%;
+    align-items: center;
+    justify-content:space-evenly;
+}
+
+.data h3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 5px 0;
+}
+
+.genres {
+    display:flex;
+    flex-direction: row;
+}
