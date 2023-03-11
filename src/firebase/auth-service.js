@@ -65,8 +65,10 @@ export const loginWithEmailAndPassword = async (email, password) => {
     try{
         const result = await signInWithEmailAndPassword(auth, email, password);
         console.log('LOGIN', result);
+        return true;
     }catch(error){
         console.error(error);
+        return false;
     }
 
 };
