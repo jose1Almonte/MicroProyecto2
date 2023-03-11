@@ -1,4 +1,4 @@
-import "./LoginPage.css";
+import Styles from './LoginPage.module.css';
 
 
 
@@ -6,41 +6,41 @@ export function LoginPage() {
 
 
     return (
-      <div className='Container'>
-        <form>
-  
-          <h3 className='titulo2'>Iniciar sesión</h3>
-  
-          <h5 className='subtitulo1' id='sub1'>Email</h5>
 
-            <input 
-            type="email" 
-            name="email" 
-            id="email" 
-            className="search-field1"></input>
-    
-            <h5 className='subtitulo2'>Contraseña</h5>
-    
-            <input 
-            type="password" 
-            name="password" 
-            id="password" 
-            placeholder="*******" 
-            className="search-field2" 
-            ></input>
-    
-            <button 
-            type="submit" 
-            className="button1L">Iniciar sesión</button>
-    
-            <button type="button" className="button2L" >Continuar con Google</button>
-    
+      <div className={Styles.body}>
       
-        </form>
+      <div className={Styles.titleBox}>
+        <h1 className={Styles.title}>BIENVENIDO</h1>
       </div>
-  
+
+      <div className={Styles.contentBox}>
+        
+        <div className={Styles.content}>
+          <h1 className={Styles.subtitle}>Iniciar Sesión</h1>
+        </div>
+
+        <div className={Styles.content}>
+          <h1 className={Styles.whiteText}>Email</h1>
+          <input type="text" className={Styles.textField} placeholder="email" />
+        </div>
+
+        <div className={Styles.content}>
+          <h1 className={Styles.whiteText}>Contraseña</h1>
+          <input type="text" className={Styles.textField} placeholder="email" />
+        </div>
+
+        <div className={Styles.content}>
+          <button className={Styles.button}><h1 className={Styles.blackText}>Ingresar</h1></button>
+        </div>
+
+        <div className={Styles.contentGoogle}>
+          <button className={Styles.buttonGoogle}><h1 className={Styles.blackText}>Continuar con Google</h1></button>
+        </div>
+
+      </div>
+      
+      </div>  
       
     )
   }
   
-  export default LoginPage;
