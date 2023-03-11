@@ -47,7 +47,14 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <Route path={SKILLS_URL} element = {<SkillsPage/>}/> 
       {/* <Route path={CompRegGoogle_URL} element = {<CompleteRegistrationGooglePage/>}/>  */}
       
-      <Route path={MOVIE_URL} element={<MovieDetailPage />} /> 
+      <Route path={MOVIE_URL} element={
+      
+      <PrivateRouteInicio>
+        <MovieDetailPage />
+      </PrivateRouteInicio>
+      
+      } /> 
+
 
     </Route>
 
