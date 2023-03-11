@@ -36,8 +36,6 @@ export function RegisterPage() {
     if(finishedSuccessfully){
       navigate(HOME_URL);
 
-    }else{
-      console.alert("Ocurrió un error, vuelva a intentar");
     }
     
   }
