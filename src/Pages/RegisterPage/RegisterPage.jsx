@@ -62,7 +62,7 @@ export function RegisterPage() {
         
         <div className={Styles.content}>
           <h1 className={Styles.whiteText}>Password</h1>
-          <input type="text" className={Styles.textField} name = 'password' onChange={handleOnChange}/>
+          <input type="password" className={Styles.textField} name = 'password' onChange={handleOnChange}/>
         </div>
 
         <div className={Styles.content}>
