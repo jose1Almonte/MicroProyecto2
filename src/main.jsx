@@ -5,12 +5,12 @@ import { HomePage } from './Pages/HomePage/HomePage'
 import { ProfilePage } from './Pages/ProfilePage/ProfilePage'
 import { AboutMePage } from './Pages/AboutMePage/AboutMePage'
 import { SkillsPage } from './Pages/SkillsPage/SkillsPage'
-import { AboutMe_URL, CompRegGoogle_URL, HOME_URL, LOGIN_URL, PROFILE_URL, REGISTER_URL, SKILLS_URL } from './constants/urls'
+import { AboutMe_URL, HOME_URL, LOGIN_URL, PROFILE_URL, REGISTER_URL, SKILLS_URL } from './constants/urls'
 import './index.css'
 import { Layout } from './components/Layout/Layout'
 import { RegisterPage } from './Pages/RegisterPage/RegisterPage'
 import { LoginPage } from './Pages/LoginPage/LoginPage'
-import { CompleteRegistrationGooglePage } from './Pages/CompleteRegistrationGooglePage/CompleteRegistrationGooglePage'
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

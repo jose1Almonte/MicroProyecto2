@@ -8,181 +8,103 @@
 }
 
 
-
 body{
-    background: #FFFFFF;
+    background: #40728D;
 }
 
-.bloque1{
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-
-.bloque1 .titulo{
-    text-align: center;
-    font-family: "League Spartan";
-    font-weight: 400px;
-    font-size: 60px;
-    line-height: 55.2px;
-    Width: 644px;
-    Height: 46px;
-    margin-top: 79px;
-    margin-left: 378px;
-}
-
-
-.imagen{
-    position: absolute;
-    width: 151px;
-    height: 124px;
-    left: 1225px;
-    top: 40px;
-}
-
-.imagen2{
-    position: absolute;
-    width: 885px;
-    height: 621px;
-    left: 588px;
-    top: 259px;
-}
-
-.logoGoogleL{
-    position: absolute;
-    width: 34px;
-    height: 34px;
-    left: 190px;
-    top: 680px;
-}
 
 .titulo2{
-    position: absolute;
-    width: 222px;
-    height: 46px;
-    left: 203px;
-    top: 195px;
-
-    font-family: 'League Spartan';
-    font-weight: 400px;
-    font-size: 40px;
-    line-height: 37px;
-    color: #000000;
-}
-
-.titulo3{
-    text-decoration: none;
-    position: absolute;
-    width: 447px;
-    height: 46px;
-    left: 90px;
-    top: 834px;
-
-    font-family: 'League Spartan';
+    width: 100%;
+    height: 139px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Jura';
     font-style: normal;
-    font-weight: 400px;
-    font-size: 30px;
-    line-height: 28px;
-
-    color: #000000;
-}
-
-.titulo4{
-    position: absolute;
-    width: 252px;
-    height: 30px;
-    left: 574px;
-    top: 926px;
-
-    font-family: 'League Spartan';
-    font-style: normal;
-    font-weight: 400px;
-    font-size: 20px;
-    line-height: 18px;
-
-    color: #000000;
-}
-
-.enlace {
-    text-decoration: none;
-
-    font-family: 'League Spartan';
-    font-style: normal;
-    font-weight: 400px;
-    font-size: 30px;
-    line-height: 28px;
-
-    color:#2180A5;
-}
-
-.subtitulo1{
-    position: absolute;
-    width: 108px;
-    height: 22px;
-    left: 127px;
-    top: 330px;
-
-    font-family: 'League Spartan';
-    font-style: normal;
-    font-weight: 400px;
-    font-size: 25px;
-    line-height: 23px;
-
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 76px;
     color: #FFFFFF;
 }
 
-.subtitulo2{
-    position: absolute;
-    width: 156px;
-    height: 22px;
-    left: 127px;
-    top: 441px;
+.subtitulo1{
+    width: 56.25%;
+    height: 108px;
 
-    font-family: 'League Spartan';
+    display: flex;
+
+    justify-content: space-around;
+    align-items: center;
+
+
+    font-family: 'Jura';
     font-style: normal;
-    font-weight: 400px;
-    font-size: 25px;
-    line-height: 23px;
-
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 47px;
+    
     color: #FFFFFF;
 }
 
 .search-field1{
+    
     position: absolute;
-    width: 381px;
-    height: 53px;
-    left: 123px;
-    top: 363px;
+    width: 331px;
+    height: 36px;
+    left: 500px;
+    top: 225px;
 
-    background: #E5F7F8;
+    background: #BBD8DE;
 }
 
-.search-field2{
-    position: absolute;
-    width: 381px;
-    height: 53px;
-    left: 123px;
-    top: 470px;
 
-    background: #E5F7F8;
+.subtitulo2{
+    
+    width: 56.25%;
+    height: 108px;
+
+    display: flex;
+
+    justify-content: space-around;
+    align-items: center;
+
+
+    font-family: 'Jura';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 47px;
+    
+    color: #FFFFFF;
+}
+
+
+.search-field2{
+    
+    position: absolute;
+    width: 331px;
+    height: 36px;
+    left: 500px;
+    top: 330px;
+    
+
+    background: #BBD8DE;
+
 }
 
 .button1L{
     cursor: pointer;
-    position: absolute;
-    width: 147px;
-    height: 53px;
-    left: 240px;
-    top: 561px;
+    background: #E5F6FA;
+    height: 79px;
+    width: 484px;
+    margin-top: 50px;
+    margin-left: 450px;
 
-    background: #E5F7F8;
-
-    font-family: 'League Spartan';
+    font-family: 'Jura';
     font-style: normal;
-    font-weight: 400px;
-    font-size: 20px;
-    line-height: 18px;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 47px;
 
     color: #000000;
 
@@ -190,31 +112,22 @@ body{
 
 .button2L{
     cursor: pointer;
+    background: #E5F6FA;
     position: absolute;
-    width: 288px;
-    height: 53px;
-    left: 170px;
-    top: 668px;
+    width: 484px;
+    height: 79px;
+    left: 450px;
+    top: 600px;
 
-    font-family: 'League Spartan';
+
+    font-family: 'Jura';
     font-style: normal;
-    font-weight: 400px;
-    font-size: 20px;
-    line-height: 18px;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 47px;
 
     color: #000000;
 
-    background: #E5F7F8;
 
 }
 
-.rectangulol{
-    position: absolute;
-    width: 505px;
-    height: 545px;
-    left: 61px;
-    top: 259px;
-
-    background: #2180A5;
-    border-radius: 15px;
-}
