@@ -49,9 +49,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       
       <Route path={MOVIE_URL} element={
       
-      <PrivateRouteInicio>
         <MovieDetailPage />
-      </PrivateRouteInicio>
+      
       
       } /> 
 
