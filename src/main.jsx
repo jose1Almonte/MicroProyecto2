@@ -48,10 +48,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       {/* <Route path={CompRegGoogle_URL} element = {<CompleteRegistrationGooglePage/>}/>  */}
       
       <Route path={MOVIE_URL} element={
-      
-        <MovieDetailPage />
-      
-      
+        
+        <PrivateRouteInicio>
+          <MovieDetailPage />
+        </PrivateRouteInicio>
+            
       } /> 
 
 
