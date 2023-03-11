@@ -38,21 +38,20 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       
       <PrivateRouteInicio>
         <HomePage/>
+      </PrivateRouteInicio>      
+      }/>
 
-      </PrivateRouteInicio>
-      
-      }/> 
+
       <Route path={PROFILE_URL} element = {<ProfilePage/>}/> 
       <Route path={AboutMe_URL} element = {<AboutMePage/>}/> 
       <Route path={SKILLS_URL} element = {<SkillsPage/>}/> 
       {/* <Route path={CompRegGoogle_URL} element = {<CompleteRegistrationGooglePage/>}/>  */}
       
       <Route path={MOVIE_URL} element={
-        
+
         <PrivateRouteInicio>
           <MovieDetailPage />
-        </PrivateRouteInicio>
-            
+        </PrivateRouteInicio>            
       } /> 
 
 

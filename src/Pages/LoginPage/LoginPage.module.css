@@ -103,3 +103,33 @@
     height: 79px;
     background: #E5F6FA;
 }
+
+@media (max-width: 622px){
+    .title{
+        font-size: 50px;
+    }
+    
+    .contentBox{
+        margin-top: 0;
+    }
+
+    .subtitle{
+        font-size: 40px;
+    }
+
+    .content{
+        width: 100%;
+    }
+
+    .whiteText{
+        font-size: 20px;
+    }
+
+    .contentGoogle{
+        width: 100%;
+    }
+
+    .blackText{
+        font-size: 12px;
+    }
+}
