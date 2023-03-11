@@ -10,6 +10,7 @@ import './index.css'
 import { Layout } from './components/Layout/Layout'
 import { RegisterPage } from './Pages/RegisterPage/RegisterPage'
 import { LoginPage } from './Pages/LoginPage/LoginPage'
+import { PrivateRouteRegister } from './PrivateRoutes/PrivateRouteRegister/PrivateRouteRegister'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -18,13 +19,34 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
 
     <Route element = {<Layout/>}>
+      
+      
+        {/* Solo pueden entrar los que no tengan un usuario activo */}
+        <Route path={REGISTER_URL} element = {
+        
+        <PrivateRouteRegister>
 
+          <RegisterPage/>
+
+        </PrivateRouteRegister>
+        }/> 
+
+        <Route path={LOGIN_URL} element = {
+        
+        <PrivateRouteRegister>
+          
+          <LoginPage/>
+
+        </PrivateRouteRegister>
+        
+        }/> 
+      
+      
+      
       <Route path={HOME_URL} element = {<HomePage/>}/> 
       <Route path={PROFILE_URL} element = {<ProfilePage/>}/> 
       <Route path={AboutMe_URL} element = {<AboutMePage/>}/> 
       <Route path={SKILLS_URL} element = {<SkillsPage/>}/> 
-      <Route path={REGISTER_URL} element = {<RegisterPage/>}/> 
-      <Route path={LOGIN_URL} element = {<LoginPage/>}/> 
       {/* <Route path={CompRegGoogle_URL} element = {<CompleteRegistrationGooglePage/>}/>  */}
 
     </Route>

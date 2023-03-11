@@ -31,9 +31,14 @@ export function RegisterPage() {
   }
 
   const handleSignWithGoogle = async () => {
-    const isNewUser = await signInWithGoogle();
-      
-    navigate(HOME_URL);
+    const finishedSuccessfully = await signInWithGoogle();
+    
+    if(finishedSuccessfully){
+      navigate(HOME_URL);
+
+    }else{
+      console.alert("Ocurrió un error, vuelva a intentar");
+    }
     
   }
 

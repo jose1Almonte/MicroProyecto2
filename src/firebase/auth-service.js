@@ -32,10 +32,11 @@ export const signInWithGoogle = async () => {
 
         }
 
-        return isNewUser;
+        return true;
     }catch(error){
-        console.error(error);
 
+        console.error(error);
+        return false;
     }
 
 };
