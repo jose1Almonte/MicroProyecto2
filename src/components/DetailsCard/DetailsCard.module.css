@@ -21,16 +21,18 @@
     flex-direction: row;
     justify-content: space-evenly;
     margin:50px 0;
+    align-items: center;
 
 }
 
 .poster {
     width: 40%;
-    background-color: red;
+
 }
 
 .poster img {
     object-fit: cover;
+    width: 100%;
 }
 .text {
     width: 50%;
