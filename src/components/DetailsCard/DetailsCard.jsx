@@ -4,7 +4,7 @@ import Styles from './DetailsCard.module.css'
 function DetailsCard({ Movie }) {
     const { title, poster_path, genres, original_language, budget, overview, popularity, production_companies, release_date, status } = Movie
     
-    console.log(movie)
+    
     
     return (
         <div className={Styles.base}>
@@ -13,7 +13,7 @@ function DetailsCard({ Movie }) {
             </div>
             <div className={Styles.info}>
                 <div className={Styles.poster}>
-                    <img src={poster_path} alt="" />
+                    <img src={`https://image.tmdb.org/t/p/w500/${poster_path}`} alt="" />
                 </div>
                 <div className={Styles.text}>
                     <div className={Styles.data}>
