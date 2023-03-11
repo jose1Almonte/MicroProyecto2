@@ -1,8 +1,12 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
+import { CompRegGoogle_URL, HOME_URL } from '../../constants/urls';
 import { registerWithEmailAndPassword, signInWithGoogle } from '../../firebase/auth-service';
 import Styles from './RegisterPage.module.css'
 
 export function RegisterPage() {
+
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     name:'',
@@ -27,7 +31,10 @@ export function RegisterPage() {
   }
 
   const handleSignWithGoogle = async () => {
-    await signInWithGoogle();
+    const isNewUser = await signInWithGoogle();
+      
+    navigate(HOME_URL);
+    
   }
 
   return (
