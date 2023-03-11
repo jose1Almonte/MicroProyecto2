@@ -26,7 +26,7 @@ export function LoginPage() {
 
         <div className={Styles.content}>
           <h1 className={Styles.whiteText}>Contraseña</h1>
-          <input type="text" className={Styles.textField} placeholder="password" />
+          <input type="password" className={Styles.textField} placeholder="password" />
         </div>
 
         <div className={Styles.content}>
