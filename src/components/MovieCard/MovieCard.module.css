@@ -7,7 +7,10 @@
     border-radius: 10px;
 }
 .imagen img{
-    object-fit: cover;
+    /* object-fit: cover; */
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .imagen {
@@ -16,6 +19,10 @@
     align-items: center;
     height: 80%;
     overflow: hidden;
+}
+
+.content{
+    height: 6.66%;
 }
 
 .info {
@@ -30,13 +37,17 @@
 .title{
     text-decoration: none;
     color: black;
-    font-size: 20px;
+    font-size: 14px;
     width: 80%;
     text-align: center;
 }
 
 .title:hover{
     color: #123c55;
+}
+
+.whiteText{
+    font-size: 10px;
 }
 
 .caja{
