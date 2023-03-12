@@ -82,8 +82,9 @@ export function Navbar() {
                             </li>
 
                             <li>
-                                    <button type = 'button' onClick={handleLogout}>
-                                        Salir
+                                    <button type = 'button' onClick={handleLogout} className = {Styles.button}>
+                                        <h1 className = {Styles.logoutText} >Salir</h1>
+                                        
                                     </button>
                             </li>
 

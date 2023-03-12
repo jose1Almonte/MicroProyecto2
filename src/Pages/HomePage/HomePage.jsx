@@ -8,12 +8,12 @@ import MovieCard from '../../components/MovieCard/MovieCard'
 
 
 export function HomePage() {
-  const [page, setPage] = useState(1)
-  const { getCommonMovies, getSoonMovies, Loading, movies } = useMovies()
-  const [soon, setSoon] = useState(true)
+    const [page, setPage] = useState(1)
+    const { getCommonMovies, getSoonMovies, Loading, movies } = useMovies()
+    const [soon, setSoon] = useState(true)
   
 
-  const API_URL = "https://api.themoviedb.org/3"
+    const API_URL = "https://api.themoviedb.org/3"
     const API_KEY = "b31f4c0464d55846ae657ecfc7b9ef53"
 
     const [movies2, setMovies] = useState([])
@@ -38,27 +38,20 @@ export function HomePage() {
     //setMovie(results[0])
     }
 
-  useEffect(() => {
-    
-    { soon ? getSoonMovies(page) : getCommonMovies(page) }
+    useEffect(() => {
+      { soon ? getSoonMovies(page) : getCommonMovies(page) }
+    }, [soon, page])
 
-  }, [soon, page])
+    console.log(movies)
 
-  //console.log(movies)
-
-  const searchMovies = (e)=>{    
-    e.preventDefault();
-
-    if(searchKey != ''){
-      setSearching(true);
-      fetchMovies(searchKey);
+    const searchMovies = (e)=>{
+      e.preventDefault();
+      fetchMovies(searchKey)
     }
 
-}
-
-  useEffect(()=>{
-    fetchMovies();
-  },[])
+    useEffect(()=>{
+      fetchMovies();
+    },[])
 
   return (
     <>
@@ -66,6 +59,7 @@ export function HomePage() {
         <h1>Bienvenido a Cartelera Caracas!</h1>
         <h3>Todas tus películas a tu disposición</h3>
       </div>
+
       <div class="cajabuscar">
         <form method="get" id="buscarform" onSubmit={searchMovies}>
           <fieldset>
@@ -77,12 +71,12 @@ export function HomePage() {
         </form>
       </div>
 
-      <div className={Styles.buttons}>      
-        <div className={Styles.button} onClick={() => { setSoon(false); setPage(1); setSearching(false) }}>Películas Comunes</div>
-        <div className={Styles.button} onClick={() => { setSoon(true); setPage(1); setSearching(false) }}>Películas Próximas</div>      
+      <div className={Styles.buttons}>
+        <div className={Styles.button} onClick={() => { setSoon(false); setPage(1)}}>Películas Comunes</div>
+        <div className={Styles.button} onClick={() => { setSoon(true); setPage(1)}}>Películas Próximas</div>
       </div>
-      <div className={Styles.listas}>
 
+      <div className={Styles.listas}>
         <div className={Styles.title}>
 
           {!!searching ? 

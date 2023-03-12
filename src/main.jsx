@@ -5,7 +5,7 @@ import { HomePage } from './Pages/HomePage/HomePage'
 import { ProfilePage } from './Pages/ProfilePage/ProfilePage'
 import { AboutMePage } from './Pages/AboutMePage/AboutMePage'
 import { SkillsPage } from './Pages/SkillsPage/SkillsPage'
-import { AboutMe_URL, HOME_URL, LOGIN_URL, PROFILE_URL, REGISTER_URL, SKILLS_URL, MOVIE_URL } from './constants/urls'
+import { AboutMe_URL, HOME_URL, LOGIN_URL, PROFILE_URL, REGISTER_URL, SKILLS_URL, MOVIE_URL, AnyElse_URL } from './constants/urls'
 import './index.css'
 import { Layout } from './components/Layout/Layout'
 import { RegisterPage } from './Pages/RegisterPage/RegisterPage'
@@ -13,6 +13,7 @@ import { LoginPage } from './Pages/LoginPage/LoginPage'
 import { PrivateRouteRegister } from './PrivateRoutes/PrivateRouteRegister/PrivateRouteRegister'
 import { MovieDetailPage } from './Pages/MovieDetailPage/MovieDetailPage'
 import { PrivateRouteInicio } from './PrivateRoutes/PrivateRouteInicio/PrivateRouteInicio'
+import { AnyElsePage } from './Pages/AnyElsePage/AnyElsePage'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -57,6 +58,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
     </Route>
 
+    <Route path={AnyElse_URL} element = {<AnyElsePage/>}/>
 
     </Routes>
     </BrowserRouter>

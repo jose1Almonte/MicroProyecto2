@@ -33,13 +33,23 @@
     text-align: center;
 }
 
-.content{
+.contentAround{
     margin: 0 auto;
     height: 109px;
     width: 56.33%;
 
     display: flex;
     justify-content: space-around;
+    align-items: center;
+}
+
+.content{
+    margin: 0 auto;
+    height: 109px;
+    width: 56.33%;
+
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 

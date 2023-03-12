@@ -9,14 +9,33 @@ export default function MovieCard(Movie) {
     return (
         <div className={styles.caja}>
             <div className={styles.tarjeta}>
+                
                 <div className={styles.imagen}>
                     <Link to={`movie/${id}`}><img src={`https://image.tmdb.org/t/p/w500/${poster_path}`} alt={`Poster de ${title}`} /></Link>
                 </div>
+
                 <div className={styles.info}>
-                    <Link to={`movie/${id}`} className={styles.title}><h1>{title}</h1></Link>
-                    <h2>{`Popularity: ${popularity}`}</h2>
-                    <h2>{`Idioma original: ${original_language}`}</h2>
+                    
+                    <div className="content">
+
+                        <Link to={`movie/${id}`} className={styles.title}><h1>{title}</h1></Link>
+
+                    </div>
+                    <div className="content">
+
+                        <h2 className={styles.whiteText}>{`Popularity: ${popularity}`}</h2>
+                    
+                    </div>
+                    <div className="content">
+                    
+                        <h2 className={styles.whiteText}>{`Idioma original: ${original_language}`}</h2>
+
+                    </div>
+                    
+                    
+                
                 </div>
+
             </div>
         </div>
     )
