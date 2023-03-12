@@ -31,9 +31,12 @@ export function RegisterPage() {
   }
 
   const handleSignWithGoogle = async () => {
-    const isNewUser = await signInWithGoogle();
-      
-    navigate(HOME_URL);
+    const finishedSuccessfully = await signInWithGoogle();
+    
+    if(finishedSuccessfully){
+      navigate(HOME_URL);
+
+    }
     
   }
 
@@ -59,7 +62,7 @@ export function RegisterPage() {
         
         <div className={Styles.content}>
           <h1 className={Styles.whiteText}>Password</h1>
-          <input type="text" className={Styles.textField} name = 'password' onChange={handleOnChange}/>
+          <input type="password" className={Styles.textField} name = 'password' onChange={handleOnChange}/>
         </div>
 
         <div className={Styles.content}>
