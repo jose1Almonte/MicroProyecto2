@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import styles from "./MovieCard.module.css"
 
 export default function MovieCard(Movie) {
-    console.log(Movie)
+    //console.log(Movie)
     const { id, poster_path, title, popularity, original_language } = Movie.Movie
 
     return (

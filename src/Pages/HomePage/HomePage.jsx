@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import axios from "axios";
 //import { Link } from 'react-router-dom'
 //import { AboutMe_URL, PROFILE_URL, SKILLS_URL } from '../../constants/urls'
 import Styles from './HomePage.module.css'
@@ -15,12 +16,14 @@ export function HomePage() {
   const API_URL = "https://api.themoviedb.org/3"
     const API_KEY = "b31f4c0464d55846ae657ecfc7b9ef53"
 
-    //const [movies, setMovies] = useState([])
+    const [movies2, setMovies] = useState([])
     const [searchKey, setSearchKey] = useState("")
-    //const [movie, setMovie] = useState({ title: "Loading Movies"})
+    const [movie, setMovie] = useState({ title: "Loading Movies"})
 
     const fetchMovies = async(searchKey) =>{
+      console.log(searchKey)
         const type = searchKey ? "search" : "discover"
+        console.log(type)
         const {data: {results},
     } = await axios.get(`${API_URL}/${type}/movie`, {
         params: {
@@ -28,8 +31,8 @@ export function HomePage() {
             query: searchKey,
         },
     });
-
-    //setMovies(results)
+    console.log(results)
+    setMovies(results)
     //setMovie(results[0])
     }
 
@@ -37,9 +40,10 @@ export function HomePage() {
     { soon ? getSoonMovies(page) : getCommonMovies(page) }
   }, [soon, page])
 
-  console.log(movies)
+  //console.log(movies)
 
   const searchMovies = (e)=>{
+    
     e.preventDefault();
     fetchMovies(searchKey)
 }
@@ -57,8 +61,8 @@ export function HomePage() {
       <div class="cajabuscar">
         <form method="get" id="buscarform" onSubmit={searchMovies}>
           <fieldset>
-            <input type="text" id="s" value="" placeholder="Buscar Pelicula" onChange={(e)=> setSearchKey(e.target.value)} />
-            <button className='button2'>Buscar</button>
+            <input type="text" id="s" placeholder="Buscar Pelicula" onChange={(e)=> setSearchKey(e.target.value)} />
+            <button className='button2' onClick={searchMovies}>Buscar</button>
             <i class="search"></i>
           </fieldset>
         </form>
