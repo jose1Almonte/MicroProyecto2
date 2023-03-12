@@ -112,7 +112,7 @@ div, fieldset{
     height: 42px;
 }
 
-.button{
+/* .button{
     right: 0;
     top: 0;
     padding: 9px 0;
@@ -130,4 +130,15 @@ div, fieldset{
     position: absolute;
     border: 0;
     vertical-align: top;
+} */
+
+.button{
+    background-color: transparent;
+    border: 0;
+}
+
+.logoutText{
+    font-size: 100%;
+    font: inherit;
+    color: rgb(12, 121, 151)
 }
