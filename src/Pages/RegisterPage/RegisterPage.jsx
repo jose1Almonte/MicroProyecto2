@@ -43,7 +43,7 @@ export function RegisterPage() {
   return (
     <div className={Styles.body}>
     <div className={Styles.titleBox}>
-      <h1 className={Styles.title}>Create Account</h1>
+      <h1 className={Styles.title}>Crear Cuenta</h1>
     </div>
 
     <div className={Styles.contentBox}>
@@ -51,8 +51,8 @@ export function RegisterPage() {
       <form onSubmit={onSubmit}>
 
         <div className={Styles.contentBetween}>
-          <h1 className={Styles.whiteText}> name</h1>
-          <input type="text" className={Styles.textField} placeholder = 'Tu nombre y apellido' name = 'name' onChange={handleOnChange}/>
+          <h1 className={Styles.whiteText}> Nombre</h1>
+          <input type="text" className={Styles.textField} placeholder = 'nombre' name = 'name' onChange={handleOnChange}/>
         </div>
 
         <div className={Styles.contentBetween}>
