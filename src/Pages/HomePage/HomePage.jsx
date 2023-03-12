@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import axios from "axios";
 //import { Link } from 'react-router-dom'
 //import { AboutMe_URL, PROFILE_URL, SKILLS_URL } from '../../constants/urls'
 import Styles from './HomePage.module.css'
@@ -15,12 +16,16 @@ export function HomePage() {
     const API_URL = "https://api.themoviedb.org/3"
     const API_KEY = "b31f4c0464d55846ae657ecfc7b9ef53"
 
-    //const [movies, setMovies] = useState([])
+    const [movies2, setMovies] = useState([])
     const [searchKey, setSearchKey] = useState("")
-    //const [movie, setMovie] = useState({ title: "Loading Movies"})
+    const [movie, setMovie] = useState({ title: "Loading Movies"})
+
+    const[searching, setSearching] = useState(false);
 
     const fetchMovies = async(searchKey) =>{
+      console.log(searchKey)
         const type = searchKey ? "search" : "discover"
+        console.log(type)
         const {data: {results},
     } = await axios.get(`${API_URL}/${type}/movie`, {
         params: {
@@ -28,21 +33,28 @@ export function HomePage() {
             query: searchKey,
         },
     });
-
-    //setMovies(results)
+    console.log(results)
+    setMovies(results)
     //setMovie(results[0])
     }
 
-    useEffect(() => {
-      { soon ? getSoonMovies(page) : getCommonMovies(page) }
-    }, [soon, page])
+  useEffect(() => {
+    
+    { soon ? getSoonMovies(page) : getCommonMovies(page) }
 
-    console.log(movies)
+  }, [soon, page])
 
-    const searchMovies = (e)=>{
-      e.preventDefault();
-      fetchMovies(searchKey)
+  //console.log(movies)
+
+  const searchMovies = (e)=>{    
+    e.preventDefault();
+
+    if(searchKey != ''){
+      setSearching(true);
+      fetchMovies(searchKey);
     }
+
+}
 
     useEffect(()=>{
       fetchMovies();
@@ -58,40 +70,80 @@ export function HomePage() {
       <div class="cajabuscar">
         <form method="get" id="buscarform" onSubmit={searchMovies}>
           <fieldset>
-            <input type="text" id="s" value="" placeholder="Buscar Pelicula" onChange={(e)=> setSearchKey(e.target.value)} />
-            <button className='button2'>Buscar</button>
+            <input type="text" id="s" placeholder="Buscar Pelicula" onChange={(e)=> setSearchKey(e.target.value)} />
+            
+            <button className='button2' onClick={searchMovies}>Buscar</button>
             <i class="search"></i>
           </fieldset>
         </form>
       </div>
 
-      <div className={Styles.buttons}>
-        <div className={Styles.button} onClick={() => { setSoon(false); setPage(1)}}>Películas Comunes</div>
-        <div className={Styles.button} onClick={() => { setSoon(true); setPage(1)}}>Películas Próximas</div>
+      <div className={Styles.buttons}>      
+        <div className={Styles.button} onClick={() => { setSoon(false); setPage(1); setSearching(false) }}>Películas Comunes</div>
+        <div className={Styles.button} onClick={() => { setSoon(true); setPage(1); setSearching(false) }}>Películas Próximas</div>      
       </div>
 
       <div className={Styles.listas}>
         <div className={Styles.title}>
-          <h1>{soon ? "Películas por estrenar" : "Películas comunes"}</h1>
+
+          {!!searching ? 
+          
+            <h1>Resultados de búsqueda</h1>
+          
+          :
+            <h1>{soon ? "Películas por estrenar" : "Películas comunes"}</h1>
+          
+          }
+        
+        
         </div>
         <div className={Styles.lista}>
 
-          <div className={Styles.pasarPag}>
-            <div className={Styles.flecha} onClick={() => { page == 1 ? setPage(1) : setPage(page-1) }}><img src="images/I.jpg" alt="izquierda" /></div>
-          </div>
+          {!searching?
+          
+            <div className={Styles.pasarPag}>
+              <div className={Styles.flecha} onClick={() => { page == 1 ? setPage(1) : setPage(page-1) }}><img src="images/I.jpg" alt="izquierda" /></div>
+            </div>
+          :
+            <>
+            </>
+          }
 
           {!Loading ?
             <div className={Styles.galeria}>
-              {movies.map((movie) => (
-                <MovieCard Movie={movie}></MovieCard>
-              ))}
+
+              {!!searching ? 
+                <>
+                {movies2.map((movie) => (
+                  <MovieCard Movie={movie}></MovieCard>
+                  ))}
+                </>              
+              : 
+                <>
+                {movies.map((movie) => (
+                  <MovieCard Movie={movie}></MovieCard>
+                  ))}                
+                </>
+              };
+
+
+
+
             </div>
             :
             <div className={Styles.loading}>
               <h1>Loading...</h1>
             </div>}
           
-          <div className={Styles.flecha} onClick={() => { page == 1000 ? setPage(1) : setPage(page + 1) }}><img src="images/D.jpg" alt="derecha" /></div>
+          {!searching ? 
+          
+            <div className={Styles.flecha} onClick={() => { page == 1000 ? setPage(1) : setPage(page + 1) }}><img src="images/D.jpg" alt="derecha" /></div>
+          
+          :
+            <>
+            </>
+          }
+          
           
         </div>
       </div>
