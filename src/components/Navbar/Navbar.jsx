@@ -31,7 +31,7 @@ export function Navbar() {
 
                     <li>
                         <Link to={HOME_URL} className={Styles.Links}>
-                            <span> Home </span>
+                            <span> Inicio </span>
                         </Link>
                     </li>
 
@@ -60,12 +60,12 @@ export function Navbar() {
                         
                             <li>
                                 <Link to = {LOGIN_URL} className = {Styles.Links}>
-                                    <span>Login</span>
+                                    <span>Iniciar Sesión</span>
                                 </Link>
                             </li>
                             <li>
                                 <Link to = {REGISTER_URL} className = {Styles.Links}>
-                                    <span>Register</span>
+                                    <span>Registrarse</span>
                                 </Link>
                             </li>
                         
