@@ -65,12 +65,12 @@ export function LoginPage() {
 
         <div className={Styles.content}>
           <h1 className={Styles.whiteText}>Email</h1>
-          <input type="text" className={Styles.textField} placeholder="email" name='email' onChange={handleOnChange} />
+          <input type="text" className={Styles.textField} placeholder="Ej. CarteleraCaracas@email.com" name='email' onChange={handleOnChange} />
         </div>
 
         <div className={Styles.content}>
           <h1 className={Styles.whiteText}>Contraseña</h1>
-          <input type="password" className={Styles.textField} placeholder="password" name='password' onChange={handleOnChange} />
+          <input type="password" className={Styles.textField} placeholder="Tu contraseña, cualquier caracter" name='password' onChange={handleOnChange} />
         </div>
 
         <div className={Styles.contentAround}>

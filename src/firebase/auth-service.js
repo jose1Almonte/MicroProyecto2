@@ -11,6 +11,7 @@ import { createUserProfile } from './users-service';
 
 
 
+
 export const signInWithGoogle = async () => {
      
    try{
@@ -36,6 +37,8 @@ export const signInWithGoogle = async () => {
     }catch(error){
 
         console.error(error);
+
+        alert('AQUI ESTAMOOOS');
         
         return false;
     }
@@ -57,6 +60,7 @@ export const registerWithEmailAndPassword = async (
         });
     }catch(error){
         console.error(error);
+        alert(error);
     }
 };
 
@@ -68,6 +72,7 @@ export const loginWithEmailAndPassword = async (email, password) => {
         return true;
     }catch(error){
         console.error(error);
+        alert(error);
         return false;
     }
 
@@ -76,5 +81,8 @@ export const loginWithEmailAndPassword = async (email, password) => {
 export const logout = async () => {
     try{
         await signOut(auth);
-    }catch(error){}
+    }catch(error){
+        Console.log (error);
+        alert(error);
+    }
 };

@@ -69,15 +69,26 @@ export function HomePage() {
         <h3>Todas tus películas a tu disposición</h3>
       </div>
 
-      <div class="cajabuscar">
-        <form method="get" id="buscarform" onSubmit={searchMovies}>
-          <fieldset>
-            <input type="text" id="s" placeholder="Buscar Pelicula" onChange={(e)=> setSearchKey(e.target.value)} />
+      <div className={Styles.cajabuscar}>
+        
+        
+
+        
+        <form method="get" id="buscarform" onSubmit={searchMovies} className={Styles.cuadroSumiso}>
+        
+          <fieldset className={Styles.cajaPequeniaBuscar}>
             
-            <button className='button2' onClick={searchMovies}>Buscar</button>
+            <input className={Styles.cuadroTexto} type="text" id="s" placeholder="Buscar Pelicula" onChange={(e)=> setSearchKey(e.target.value)} />
+            
+            <button className={Styles.button2} onClick={searchMovies}>Buscar</button>
+            
             <i class="search"></i>
+          
           </fieldset>
+        
         </form>
+
+        
       </div>
 
       <div className={Styles.buttons}>      
