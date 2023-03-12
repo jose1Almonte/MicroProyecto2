@@ -1,0 +1,46 @@
+.tarjeta {
+    margin: 5px;
+    width: 20vw;
+    height: 80vh;
+    overflow: hidden;
+    background-color: #1b597c;
+    border-radius: 10px;
+}
+.imagen img{
+    object-fit: cover;
+}
+
+.imagen {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    overflow: hidden;
+}
+
+.info {
+    height: 20%;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-around; 
+    align-items: center;
+    color: white;
+}
+
+.title{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    width: 80%;
+    text-align: center;
+}
+
+.title:hover{
+    color: #123c55;
+}
+
+.caja{
+    margin: 15px;
+    background-color: #123c55;
+    border-radius: 10px;
+}

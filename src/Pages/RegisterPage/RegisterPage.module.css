@@ -40,6 +40,18 @@
     
 }
 
+.contentBetween{
+    margin: 0 auto;
+    width: 56.25%;
+    height: 108px;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+
 .whiteText{
     font-family: 'Jura';
     font-style: normal;
