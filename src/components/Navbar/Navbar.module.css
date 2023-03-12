@@ -17,8 +17,7 @@
     cursor: pointer;
 
     /* background-color: green; */
-
-    width: 50%;
+    width: 30%;
     
     display: flex;
     justify-content: space-around;
@@ -26,12 +25,14 @@
     
     list-style: none;
 
-
 }
+
 
 .Links {
     text-decoration: none;
     color: black;
+
+    font-size: 26px;
 }
 
 li:hover{
@@ -42,12 +43,13 @@ li:hover{
     cursor: pointer;
 
     /* background-color: red; */
-
-    width: 30%;
     
-    padding-right: 1%;
+    width: 40%;
+    
+    padding-right: 2%;
+    padding-left: 15%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     
     /* background-color: green; */
@@ -140,5 +142,15 @@ div, fieldset{
 .logoutText{
     font-size: 100%;
     font: inherit;
-    color: rgb(12, 121, 151)
+    color: rgb(12, 121, 151);
 }
+
+
+@media (max-width: 600px){
+
+    .Links{
+        font-size: 10px;
+    }
+}
+
+

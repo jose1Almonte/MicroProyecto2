@@ -38,16 +38,23 @@ export function HomePage() {
     //setMovie(results[0])
     }
 
-    useEffect(() => {
-      { soon ? getSoonMovies(page) : getCommonMovies(page) }
-    }, [soon, page])
+  useEffect(() => {
+    
+    { soon ? getSoonMovies(page) : getCommonMovies(page) }
 
-    console.log(movies)
+  }, [soon, page])
 
-    const searchMovies = (e)=>{
-      e.preventDefault();
-      fetchMovies(searchKey)
+  //console.log(movies)
+
+  const searchMovies = (e)=>{    
+    e.preventDefault();
+
+    if(searchKey != ''){
+      setSearching(true);
+      fetchMovies(searchKey);
     }
+
+}
 
     useEffect(()=>{
       fetchMovies();
@@ -55,25 +62,40 @@ export function HomePage() {
 
   return (
     <>
+      <div className={Styles.backgroundImage}>
+
       <div className={Styles.bienvenida}>
         <h1>Bienvenido a Cartelera Caracas!</h1>
         <h3>Todas tus películas a tu disposición</h3>
       </div>
 
-      <div class="cajabuscar">
-        <form method="get" id="buscarform" onSubmit={searchMovies}>
-          <fieldset>
-            <input type="text" id="s" placeholder="Buscar Pelicula" onChange={(e)=> setSearchKey(e.target.value)} />
+      <div className={Styles.cajabuscar}>
+        
+        
+
+        
+        <form method="get" id="buscarform" onSubmit={searchMovies} className={Styles.cuadroSumiso}>
+        
+          <fieldset className={Styles.cajaPequeniaBuscar}>
             
-            <button className='button2' onClick={searchMovies}>Buscar</button>
+            <input className={Styles.cuadroTexto} type="text" id="s" placeholder="Buscar Pelicula" onChange={(e)=> setSearchKey(e.target.value)} />
+            
+            <button className={Styles.button2} onClick={searchMovies}>Buscar</button>
+            
             <i class="search"></i>
+          
           </fieldset>
+        
         </form>
+
+        
       </div>
 
-      <div className={Styles.buttons}>
-        <div className={Styles.button} onClick={() => { setSoon(false); setPage(1)}}>Películas Comunes</div>
-        <div className={Styles.button} onClick={() => { setSoon(true); setPage(1)}}>Películas Próximas</div>
+      <div className={Styles.buttons}>      
+        <div className={Styles.button} onClick={() => { setSoon(false); setPage(1); setSearching(false) }}>Películas Comunes</div>
+        <div className={Styles.button} onClick={() => { setSoon(true); setPage(1); setSearching(false) }}>Películas Próximas</div>      
+      </div>
+
       </div>
 
       <div className={Styles.listas}>
@@ -107,9 +129,22 @@ export function HomePage() {
 
               {!!searching ? 
                 <>
-                {movies2.map((movie) => (
-                  <MovieCard Movie={movie}></MovieCard>
-                  ))}
+
+                  {movies2.length != 0 ? 
+                    
+                    <>
+
+                    {movies2.map((movie) => (
+                      <MovieCard Movie={movie}></MovieCard>
+                    ))}
+
+                    </>
+                  :
+                  
+                  <h1>SIN RESULTADOS DE BUSQUEDA</h1>
+                  
+                }
+
                 </>              
               : 
                 <>

@@ -66,12 +66,24 @@
     width: 45.97%;
     height: 36px;
     background: #BBD8DE;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    border-radius: 30px 30px 30px 30px;
 }
 
 .button{
     background: #E5F6FA;
     height: 79px;
     width: 42.69%;
+    border-radius: 30px 30px 30px 30px;
+}
+
+.button:hover{
+    transform:scale(1.1)
 }
 
 .blackText{
@@ -93,4 +105,19 @@
 
 button{
     cursor: pointer;
+}
+
+@media (max-width: 847px){
+    .title{
+        font-size: 40px;
+    }
+
+    .whiteText{
+        font-size: 30px;
+    }
+
+    .blackText{
+        font-size: 14px;
+    }
+
 }

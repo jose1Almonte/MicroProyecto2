@@ -16,17 +16,17 @@ export default function MovieCard(Movie) {
 
                 <div className={styles.info}>
                     
-                    <div className="content">
-
+                    <div className={styles.content}>
+                        
                         <Link to={`movie/${id}`} className={styles.title}><h1>{title}</h1></Link>
-
+                        
                     </div>
-                    <div className="content">
+                    <div className={styles.content}>
 
                         <h2 className={styles.whiteText}>{`Popularity: ${popularity}`}</h2>
                     
                     </div>
-                    <div className="content">
+                    <div className={styles.content}>
                     
                         <h2 className={styles.whiteText}>{`Idioma original: ${original_language}`}</h2>
 

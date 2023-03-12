@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
-
 import { Link } from 'react-router-dom'
-import { AboutMe_URL, HOME_URL, LOGIN_URL, PROFILE_URL, REGISTER_URL, SKILLS_URL } from '../../constants/urls'
+import {  HOME_URL, LOGIN_URL,  REGISTER_URL } from '../../constants/urls'
 import { UserContextProvider, useUser } from '../../context/UserContext'
 import { logout } from '../../firebase/auth-service'
 import Styles from './Navbar.module.css'
@@ -36,7 +35,7 @@ export function Navbar() {
                         </Link>
                     </li>
 
-                    <li>
+                    {/* <li>
                         <Link to = {PROFILE_URL} className={Styles.Links}>
                             <span> Profile </span>
                         </Link>
@@ -50,7 +49,7 @@ export function Navbar() {
                         <Link to = {SKILLS_URL} className = {Styles.Links}>
                             <span>Skills</span>
                         </Link>
-                    </li>
+                    </li> */}
 
                 </ul>
 
