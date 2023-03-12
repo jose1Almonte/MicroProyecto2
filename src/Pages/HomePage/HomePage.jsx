@@ -114,9 +114,22 @@ export function HomePage() {
 
               {!!searching ? 
                 <>
-                {movies2.map((movie) => (
-                  <MovieCard Movie={movie}></MovieCard>
-                  ))}
+
+                  {movies2.length != 0 ? 
+                    
+                    <>
+
+                    {movies2.map((movie) => (
+                      <MovieCard Movie={movie}></MovieCard>
+                    ))}
+
+                    </>
+                  :
+                  
+                  <h1>SIN RESULTADOS DE BUSQUEDA</h1>
+                  
+                }
+
                 </>              
               : 
                 <>
