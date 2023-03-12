@@ -1,8 +1,12 @@
+.body{
+    align-items: center;
+    background: #40728D;
+}
 
 .base {
-    width: 80vw;
+    margin: 0 auto;
+    width: 80%;
     display:flex;
-    flex-direction: column;
     background-color: #1b597c;
     color:white;
     flex-direction: column;
@@ -46,6 +50,24 @@
     flex-direction: column;
     justify-content: space-around;
     margin: 5px 0;
+}
+
+.gender{
+    font-size: 12px;
+    color: #dbe5eb;
+}
+
+.whiteText{
+    font-size: 16px;
+    
+}
+
+.companies{
+    margin-left: 25px;
+}
+
+.whiteSmallText{
+    font-size: 12px;
 }
 
 .genres {
