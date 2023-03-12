@@ -1,7 +1,7 @@
 import React from 'react'
 import Styles from './DetailsCard.module.css'
 
-function DetailsCard({ Movie }) {
+export function DetailsCard({ Movie }) {
     const { title, poster_path, genres, original_language, budget, overview, popularity, production_companies, release_date, status } = Movie
 
     
@@ -64,4 +64,3 @@ function DetailsCard({ Movie }) {
     )
 }
 
-export default DetailsCard

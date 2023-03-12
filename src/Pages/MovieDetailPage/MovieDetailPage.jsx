@@ -2,7 +2,8 @@ import React, { useEffect } from 'react'
 import styles from "./MovieDetailPage.module.css"
 import { useMovies } from '../../hooks/useMovies'
 import { useParams } from 'react-router-dom'
-import DetailsCard from '../../components/DetailsCard/DetailsCard'
+import { DetailsCard } from '../../components/DetailsCard/DetailsCard'
+import { Footer } from '../../components/Footer/Footer'
 
 export function MovieDetailPage() {
     const movie_id = useParams()
@@ -34,9 +35,14 @@ export function MovieDetailPage() {
     }
 
     return (
+        <>
+        
         <div className={styles.details}>
             <DetailsCard Movie={movie}></DetailsCard>
         </div>
 
+        <Footer/>
+
+        </>
     )
 }

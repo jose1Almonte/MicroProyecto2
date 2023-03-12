@@ -11,34 +11,39 @@ import { PrivateRouteRegister } from './PrivateRoutes/PrivateRouteRegister/Priva
 import { MovieDetailPage } from './Pages/MovieDetailPage/MovieDetailPage'
 import { PrivateRouteInicio } from './PrivateRoutes/PrivateRouteInicio/PrivateRouteInicio'
 import { AnyElsePage } from './Pages/AnyElsePage/AnyElsePage'
+import { LayoutFooter } from './components/Layout/LayoutFooter'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>    
     <Routes>
 
-    <Route element = {<Layout/>}>      
-      
-        {/* Solo pueden entrar los que no tengan un usuario activo */}
-        <Route path={REGISTER_URL} element = {        
-        <PrivateRouteRegister>
-          <RegisterPage/>
-        </PrivateRouteRegister>
-        }/> 
+    <Route element = {<Layout/>}>   
 
-        <Route path={LOGIN_URL} element = {        
-        <PrivateRouteRegister>          
-          <LoginPage/>
-        </PrivateRouteRegister>        
-        }/> 
+        <Route element = {<LayoutFooter/>}>
+          
       
-      <Route path={HOME_URL} element = {
-      
-      <PrivateRouteInicio>
-        <HomePage/>
-      </PrivateRouteInicio>      
-      }/>
+          {/* Solo pueden entrar los que no tengan un usuario activo */}
+          <Route path={REGISTER_URL} element = {        
+            <PrivateRouteRegister>
+            <RegisterPage/>
+          </PrivateRouteRegister>
+          }/> 
 
+          <Route path={LOGIN_URL} element = {        
+            <PrivateRouteRegister>          
+            <LoginPage/>
+          </PrivateRouteRegister>        
+          }/> 
+        
+          <Route path={HOME_URL} element = {
+            
+            <PrivateRouteInicio>
+            <HomePage/>
+          </PrivateRouteInicio>      
+          }/>
+
+      </Route>
 
       {/* <Route path={PROFILE_URL} element = {<ProfilePage/>}/> 
       <Route path={AboutMe_URL} element = {<AboutMePage/>}/> 

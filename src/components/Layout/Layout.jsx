@@ -15,10 +15,11 @@ export function Layout() {
             <Outlet/>
             
         </section>
+        
         {/* <h1>Footer</h1> */}
         
-        <Footer/>
         </UserContextProvider>
+    
     </main>
   )
 }

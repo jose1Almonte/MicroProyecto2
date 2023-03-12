@@ -3,7 +3,9 @@
     justify-content: space-around;
     align-items: center;
     height: 25px;
-    background-color: #BBD8DE;
+    /* background-color: rgb(55, 99, 180); */
+    background: #E5F6FA;
+
     
 }
 
