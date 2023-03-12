@@ -62,6 +62,8 @@ export function HomePage() {
 
   return (
     <>
+      <div className={Styles.backgroundImage}>
+
       <div className={Styles.bienvenida}>
         <h1>Bienvenido a Cartelera Caracas!</h1>
         <h3>Todas tus películas a tu disposición</h3>
@@ -81,6 +83,8 @@ export function HomePage() {
       <div className={Styles.buttons}>      
         <div className={Styles.button} onClick={() => { setSoon(false); setPage(1); setSearching(false) }}>Películas Comunes</div>
         <div className={Styles.button} onClick={() => { setSoon(true); setPage(1); setSearching(false) }}>Películas Próximas</div>      
+      </div>
+
       </div>
 
       <div className={Styles.listas}>
