@@ -51,18 +51,18 @@ export function RegisterPage() {
       <form onSubmit={onSubmit}>
 
         <div className={Styles.contentBetween}>
-          <h1 className={Styles.whiteText}> Nombre</h1>
-          <input type="text" className={Styles.textField} placeholder = 'nombre' name = 'name' onChange={handleOnChange}/>
+          <h1 className={Styles.whiteText}> name</h1>
+          <input type="text" className={Styles.textField} placeholder = 'Tu nombre y apellido' name = 'name' onChange={handleOnChange}/>
         </div>
 
         <div className={Styles.contentBetween}>
           <h1 className={Styles.whiteText}>Email</h1>
-          <input type="text" className={Styles.textField} placeholder = 'email' name = 'email' onChange={handleOnChange}/>
+          <input type="text" className={Styles.textField} placeholder = 'Ej. CarteleraCaracas@email.com' name = 'email' onChange={handleOnChange}/>
         </div>
         
         <div className={Styles.contentBetween}>
           <h1 className={Styles.whiteText}>Password</h1>
-          <input type="password" className={Styles.textField} placeholder = 'password' name = 'password' onChange={handleOnChange}/>
+          <input type="password" className={Styles.textField} placeholder = 'Contraseña' name = 'password' onChange={handleOnChange}/>
         </div>
 
         <div className={Styles.content}>
