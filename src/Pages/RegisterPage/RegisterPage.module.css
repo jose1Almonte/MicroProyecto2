@@ -106,3 +106,18 @@
 button{
     cursor: pointer;
 }
+
+@media (max-width: 847px){
+    .title{
+        font-size: 40px;
+    }
+
+    .whiteText{
+        font-size: 30px;
+    }
+
+    .blackText{
+        font-size: 14px;
+    }
+
+}

@@ -17,3 +17,9 @@
 .teamText:hover{
     transform: scale(1.1);
 }
+
+@media (max-width: 670px){
+    .teamText{
+        font-size: 8px;
+    }
+}
