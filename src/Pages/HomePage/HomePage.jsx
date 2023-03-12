@@ -20,6 +20,8 @@ export function HomePage() {
     const [searchKey, setSearchKey] = useState("")
     const [movie, setMovie] = useState({ title: "Loading Movies"})
 
+    const[searching, setSearching] = useState(false);
+
     const fetchMovies = async(searchKey) =>{
       console.log(searchKey)
         const type = searchKey ? "search" : "discover"
@@ -37,15 +39,21 @@ export function HomePage() {
     }
 
   useEffect(() => {
+    
     { soon ? getSoonMovies(page) : getCommonMovies(page) }
+
   }, [soon, page])
 
   //console.log(movies)
 
-  const searchMovies = (e)=>{
-    
+  const searchMovies = (e)=>{    
     e.preventDefault();
-    fetchMovies(searchKey)
+
+    if(searchKey != ''){
+      setSearching(true);
+      fetchMovies(searchKey);
+    }
+
 }
 
   useEffect(()=>{
@@ -62,19 +70,31 @@ export function HomePage() {
         <form method="get" id="buscarform" onSubmit={searchMovies}>
           <fieldset>
             <input type="text" id="s" placeholder="Buscar Pelicula" onChange={(e)=> setSearchKey(e.target.value)} />
+            
             <button className='button2' onClick={searchMovies}>Buscar</button>
             <i class="search"></i>
           </fieldset>
         </form>
       </div>
-      <div className={Styles.buttons}>
-        <div className={Styles.button} onClick={() => { setSoon(false); setPage(1)}}>Películas Comunes</div>
-        <div className={Styles.button} onClick={() => { setSoon(true); setPage(1)}}>Películas Próximas</div>
+
+      <div className={Styles.buttons}>      
+        <div className={Styles.button} onClick={() => { setSoon(false); setPage(1); setSearching(false) }}>Películas Comunes</div>
+        <div className={Styles.button} onClick={() => { setSoon(true); setPage(1); setSearching(false) }}>Películas Próximas</div>      
       </div>
       <div className={Styles.listas}>
 
         <div className={Styles.title}>
-          <h1>{soon ? "Películas por estrenar" : "Películas comunes"}</h1>
+
+          {!!searching ? 
+          
+            <h1>Resultados de búsqueda</h1>
+          
+          :
+            <h1>{soon ? "Películas por estrenar" : "Películas comunes"}</h1>
+          
+          }
+        
+        
         </div>
         <div className={Styles.lista}>
 
@@ -84,9 +104,31 @@ export function HomePage() {
 
           {!Loading ?
             <div className={Styles.galeria}>
-              {movies.map((movie) => (
-                <MovieCard Movie={movie}></MovieCard>
-              ))}
+
+              {!!searching ? 
+                <>
+
+                {movies2.map((movie) => (
+                  <MovieCard Movie={movie}></MovieCard>
+                  ))}                
+
+                </>
+
+              
+              : 
+
+                <>
+                {movies.map((movie) => (
+                  <MovieCard Movie={movie}></MovieCard>
+                  ))}
+                
+                </>
+
+              };
+
+
+
+
             </div>
             :
             <div className={Styles.loading}>
