@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+
 import { Link } from 'react-router-dom'
 import { AboutMe_URL, HOME_URL, LOGIN_URL, PROFILE_URL, REGISTER_URL, SKILLS_URL } from '../../constants/urls'
 import { UserContextProvider, useUser } from '../../context/UserContext'
@@ -6,12 +7,16 @@ import { logout } from '../../firebase/auth-service'
 import Styles from './Navbar.module.css'
 export function Navbar() {
 
+    
+
     const{user} = useUser();
     
     const handleLogout = async() => {
         console.log('SALIENDO...');
         await logout();
     }
+
+    
 
   return (
     <main>
@@ -87,15 +92,7 @@ export function Navbar() {
                         </>
                     )}
 
-                    <li>
-                    <div class="cajabuscar"><form method="get" id="buscarform">
-                    <fieldset>
-                        <input type="text" id="s" value="" placeholder="Buscar Pelicula" />
-                        <input class="button" type="submit" value="" />
-                        <i class="search"></i>
-                    </fieldset>
-                    </form></div>
-                    </li>
+                   
 
                 </ul>
 
