@@ -57,7 +57,7 @@ export function LoginPage() {
 
       <div className={Styles.contentBox}>
         
-        <div className={Styles.content}>
+        <div className={Styles.contentAround}>
           <h1 className={Styles.subtitle}>Iniciar Sesión</h1>
         </div>
 
@@ -73,7 +73,7 @@ export function LoginPage() {
           <input type="password" className={Styles.textField} placeholder="password" name='password' onChange={handleOnChange} />
         </div>
 
-        <div className={Styles.content}>
+        <div className={Styles.contentAround}>
           <button className={Styles.button}  onClick = {onSubmit}><h1 className={Styles.blackText}>Ingresar</h1></button>
         </div>
 
