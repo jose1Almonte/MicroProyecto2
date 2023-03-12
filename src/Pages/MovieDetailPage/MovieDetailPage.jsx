@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import styles from "./MovieDetailPage.module.css"
-import { useMovies } from '../../hooks/useCharacters'
+import { useMovies } from '../../hooks/useMovies'
 import { useParams } from 'react-router-dom'
 import DetailsCard from '../../components/DetailsCard/DetailsCard'
 

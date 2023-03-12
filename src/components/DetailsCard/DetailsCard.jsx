@@ -13,7 +13,7 @@ function DetailsCard({ Movie }) {
             </div>
             <div className={Styles.info}>
                 <div className={Styles.poster}>
-                    <img src={`https://image.tmdb.org/t/p/w500/${poster_path}`} alt="" />
+                    <img src={`https://image.tmdb.org/t/p/w500/${poster_path}`} alt={ `Poster de ${title}`} />
                 </div>
                 <div className={Styles.text}>
                     <div className={Styles.data}>
