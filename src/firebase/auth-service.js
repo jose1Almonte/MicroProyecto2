@@ -38,7 +38,7 @@ export const signInWithGoogle = async () => {
 
         console.error(error);
 
-        alert('AQUI ESTAMOOOS');
+        alert(error);
         
         return false;
     }

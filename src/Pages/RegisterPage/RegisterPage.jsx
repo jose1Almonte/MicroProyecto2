@@ -51,8 +51,8 @@ export function RegisterPage() {
       <form onSubmit={onSubmit}>
 
         <div className={Styles.contentBetween}>
-          <h1 className={Styles.whiteText}> name</h1>
-          <input type="text" className={Styles.textField} placeholder = 'Tu nombre y apellido' name = 'name' onChange={handleOnChange}/>
+          <h1 className={Styles.whiteText}> Nombre</h1>
+          <input type="text" className={Styles.textField} placeholder = 'nombre' name = 'name' onChange={handleOnChange}/>
         </div>
 
         <div className={Styles.contentBetween}>
@@ -61,18 +61,18 @@ export function RegisterPage() {
         </div>
         
         <div className={Styles.contentBetween}>
-          <h1 className={Styles.whiteText}>Password</h1>
+          <h1 className={Styles.whiteText}>Contraseña</h1>
           <input type="password" className={Styles.textField} placeholder = 'Contraseña' name = 'password' onChange={handleOnChange}/>
         </div>
 
         <div className={Styles.content}>
-          <button className={Styles.button}><h1 className={Styles.blackText} onClick={onSubmit}>Create Account</h1></button>
+          <button className={Styles.button}><h1 className={Styles.blackText} onClick={onSubmit}>Crear Cuenta</h1></button>
         </div>
 
       </form>
 
       <div className={Styles.contentContinueGoogle}>
-        <button className={Styles.button}><h1 className={Styles.blackText} onClick={handleSignWithGoogle}>Continue with Google</h1></button>
+        <button className={Styles.button}><h1 className={Styles.blackText} onClick={handleSignWithGoogle}>Continuar con Google</h1></button>
       </div>
     </div>
 
