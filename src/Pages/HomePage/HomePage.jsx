@@ -98,32 +98,31 @@ export function HomePage() {
         </div>
         <div className={Styles.lista}>
 
-          <div className={Styles.pasarPag}>
-            <div className={Styles.flecha} onClick={() => { page == 1 ? setPage(1) : setPage(page-1) }}><img src="images/I.jpg" alt="izquierda" /></div>
-          </div>
+          {!searching?
+          
+            <div className={Styles.pasarPag}>
+              <div className={Styles.flecha} onClick={() => { page == 1 ? setPage(1) : setPage(page-1) }}><img src="images/I.jpg" alt="izquierda" /></div>
+            </div>
+          :
+            <>
+            </>
+          }
 
           {!Loading ?
             <div className={Styles.galeria}>
 
               {!!searching ? 
                 <>
-
                 {movies2.map((movie) => (
                   <MovieCard Movie={movie}></MovieCard>
-                  ))}                
-
-                </>
-
-              
+                  ))}
+                </>              
               : 
-
                 <>
                 {movies.map((movie) => (
                   <MovieCard Movie={movie}></MovieCard>
-                  ))}
-                
+                  ))}                
                 </>
-
               };
 
 
@@ -135,7 +134,15 @@ export function HomePage() {
               <h1>Loading...</h1>
             </div>}
           
-          <div className={Styles.flecha} onClick={() => { page == 1000 ? setPage(1) : setPage(page + 1) }}><img src="images/D.jpg" alt="derecha" /></div>
+          {!searching ? 
+          
+            <div className={Styles.flecha} onClick={() => { page == 1000 ? setPage(1) : setPage(page + 1) }}><img src="images/D.jpg" alt="derecha" /></div>
+          
+          :
+            <>
+            </>
+          }
+          
           
         </div>
       </div>
