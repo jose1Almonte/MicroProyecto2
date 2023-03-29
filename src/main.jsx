@@ -12,7 +12,6 @@ import { MovieDetailPage } from './Pages/MovieDetailPage/MovieDetailPage'
 import { PrivateRouteInicio } from './PrivateRoutes/PrivateRouteInicio/PrivateRouteInicio'
 import { AnyElsePage } from './Pages/AnyElsePage/AnyElsePage'
 import { LayoutFooter } from './components/Layout/LayoutFooter'
-import { FavoritesPage } from './Pages/FavoritesPage/FavoritesPage'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
