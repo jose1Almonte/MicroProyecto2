@@ -17,7 +17,7 @@ export function Navbar() {
 
     
 
-  return (
+return (
     <main>
         <UserContextProvider>
 
@@ -79,6 +79,12 @@ export function Navbar() {
                                 <span className = {Styles.Links}> {user.name} </span>
 
                             </li>
+                            
+                            <li>
+                                
+                                <span className = {Styles.Links}> Favoritos </span>
+
+                            </li>      
 
                             <li>
                                     <button type = 'button' onClick={handleLogout} className = {Styles.button}>
