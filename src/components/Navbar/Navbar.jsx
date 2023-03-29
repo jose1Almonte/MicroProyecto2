@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import {  HOME_URL, LOGIN_URL,  REGISTER_URL } from '../../constants/urls'
+import {  HOME_URL, LOGIN_URL,  REGISTER_URL, FAVORITE_URL } from '../../constants/urls'
 import { UserContextProvider, useUser } from '../../context/UserContext'
 import { logout } from '../../firebase/auth-service'
 import Styles from './Navbar.module.css'
@@ -81,9 +81,9 @@ return (
                             </li>
                             
                             <li>
-                                
-                                <span className = {Styles.Links}> Favoritos </span>
-
+                                <Link to={`favorites/${user.user_id}`}>
+                                    <span className={Styles.Links}> Favoritos </span>
+                                </Link>
                             </li>      
 
                             <li>
@@ -98,7 +98,7 @@ return (
                         </>
                     )}
 
-                   
+                
 
                 </ul>
 

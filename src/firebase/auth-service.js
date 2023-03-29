@@ -54,10 +54,12 @@ export const registerWithEmailAndPassword = async (
         const result = await createUserWithEmailAndPassword(auth, email, password);
         console.log("REGISTER EMAIL AND PASSWORD", result);
         const likes = []
+        const user_id = result.user.uid
         await createUserProfile(result.user.uid, {
             email,
             password,
             likes,
+            user_id,
             ...extraData
         });
     }catch(error){
