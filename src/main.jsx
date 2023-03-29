@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { HomePage } from './Pages/HomePage/HomePage'
-import { HOME_URL, LOGIN_URL, REGISTER_URL, MOVIE_URL, AnyElse_URL, FAVORITE_URL } from './constants/urls'
+import { HOME_URL, LOGIN_URL, REGISTER_URL, MOVIE_URL, AnyElse_URL } from './constants/urls'
 import './index.css'
 import { Layout } from './components/Layout/Layout'
 import { RegisterPage } from './Pages/RegisterPage/RegisterPage'
@@ -43,12 +43,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <HomePage/>
           </PrivateRouteInicio>      
             } />
-          <Route path={FAVORITE_URL} element = {
-            
-            <PrivateRouteInicio>
-            <FavoritesPage/>
-          </PrivateRouteInicio>      
-          }/>
+
 
         </Route>
 
